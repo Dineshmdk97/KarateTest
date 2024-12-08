@@ -1,0 +1,13 @@
+<testsuite failures="0" name="com/api/automation/postrequest/data/createJobEntry.feature" skipped="0" tests="1" time="0.033749">
+  <testcase classname="com.api.automation.postrequest.data.createJobEntry" name="To create job entry with JSON data" time="0.033749">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def id = getRandomNumber() ............................................ passed
+And request {"jobId":"#(id)","jobTitle":"Software Engineering","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And print response ........................................................ passed
+Then status 201 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

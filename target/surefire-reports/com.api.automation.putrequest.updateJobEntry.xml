@@ -1,0 +1,99 @@
+<testsuite failures="0" name="com/api/automation/putrequest/updateJobEntry.feature" skipped="0" tests="3" time="0.295756">
+  <testcase classname="com.api.automation.putrequest.updateJobEntry" name="To update the job entry for existing job" time="0.106009">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def id = getRandomNumber() ............................................ passed
+And request {"jobId":"#(id)","jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And print response ........................................................ passed
+Then status 201 ........................................................... passed
+Given path 'normal/webapi/update' ......................................... passed
+And request ............................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method put ........................................................... passed
+And print response ........................................................ passed
+Then status 200 ........................................................... passed
+And def updatedProjectArray = karate.jsonPath(response, "$[?(@.jobId == "+id+")].project") . passed
+And print updatedProjectArray ............................................. passed
+And match updatedProjectArray[0] == '#[2]' ................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.putrequest.updateJobEntry" name="To update the job entry for existing job by calling another feature file" time="0.089717">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def id = getRandomNumber() ............................................ passed
+And request {"jobId":"#(id)","jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And print response ........................................................ passed
+Then status 201 ........................................................... passed
+Given path 'normal/webapi/update' ......................................... passed
+And request ............................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method put ........................................................... passed
+And print response ........................................................ passed
+Then status 200 ........................................................... passed
+And def updatedProjectArray = karate.jsonPath(response, "$[?(@.jobId == "+id+")].project") . passed
+And print updatedProjectArray ............................................. passed
+And match updatedProjectArray[0] == '#[2]' ................................ passed
+Given url 'http://localhost:9897' ......................................... passed
+And def postrequest = call read("../postrequest/data/createJobEntry.feature") . passed
+And print "Calling createJobEntry feature =&gt; ", postrequest.id ............ passed
+Given path 'normal/webapi/update' ......................................... passed
+And request ............................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method put ........................................................... passed
+And print response ........................................................ passed
+Then status 200 ........................................................... passed
+And def updatedProjectArray = karate.jsonPath(response, "$[?(@.jobId == "+postrequest.id+")].project") . passed
+And print updatedProjectArray ............................................. passed
+And match updatedProjectArray[0] == '#[2]' ................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.putrequest.updateJobEntry" name="To update the job entry for existing job by calling another feature file with variables" time="0.10003">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def id = getRandomNumber() ............................................ passed
+And request {"jobId":"#(id)","jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And print response ........................................................ passed
+Then status 201 ........................................................... passed
+Given path 'normal/webapi/update' ......................................... passed
+And request ............................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method put ........................................................... passed
+And print response ........................................................ passed
+Then status 200 ........................................................... passed
+And def updatedProjectArray = karate.jsonPath(response, "$[?(@.jobId == "+id+")].project") . passed
+And print updatedProjectArray ............................................. passed
+And match updatedProjectArray[0] == '#[2]' ................................ passed
+Given url 'http://localhost:9897' ......................................... passed
+And def postrequest = call read("../postrequest/data/createJobEntry.feature") . passed
+And print "Calling createJobEntry feature =&gt; ", postrequest.id ............ passed
+Given path 'normal/webapi/update' ......................................... passed
+And request ............................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method put ........................................................... passed
+And print response ........................................................ passed
+Then status 200 ........................................................... passed
+And def updatedProjectArray = karate.jsonPath(response, "$[?(@.jobId == "+postrequest.id+")].project") . passed
+And print updatedProjectArray ............................................. passed
+And match updatedProjectArray[0] == '#[2]' ................................ passed
+Given url 'http://localhost:9897' ......................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def id = getRandomNumber() ............................................ passed
+Given call read("../postrequest/data/createJobEntryWithVariables.feature") {_url: 'http://localhost:9897', _path: '/normal/webapi/add', _id: '#(id)'} . passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method put ........................................................... passed
+And print response ........................................................ passed
+Then status 200 ........................................................... passed
+And def updatedProjectArray = karate.jsonPath(response, "$[?(@.jobId == "+id+")].project") . passed
+And print updatedProjectArray ............................................. passed
+And match updatedProjectArray[0] == '#[2]' ................................ passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,30 @@
+<testsuite failures="0" name="com/api/automation/postrequest/schemaValidation.feature" skipped="0" tests="2" time="0.080991">
+  <testcase classname="com.api.automation.postrequest.schemaValidation" name="To create the job entry in JSON format using external JSON file" time="0.019121">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.json') ................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And match response == ..................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.schemaValidation" name="Schema validation for GET endpoint" time="0.061871">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.json') ................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And match response == ..................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And def projectSchema = { "projectName": "#string", "technology": "#[] #string" } . passed
+And def mainSchema = {"jobId": "#number", "jobTitle": "#string", "jobDescription": "#string", "experience": "#[] #string", "project": "#[] ##(projectSchema)" } . passed
+And match response == ..................................................... passed</system-out>
+  </testcase>
+</testsuite>

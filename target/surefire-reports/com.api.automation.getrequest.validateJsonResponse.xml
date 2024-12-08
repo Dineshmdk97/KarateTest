@@ -1,0 +1,55 @@
+<testsuite failures="0" name="com/api/automation/getrequest/validateJsonResponse.feature" skipped="0" tests="2" time="0.171387">
+  <testcase classname="com.api.automation.getrequest.validateJsonResponse" name="To get the data in JSON format and validate from a external file" time="0.063876">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.[0].jobId == 1 ......................................... passed
+And match response.[0].experience[1] == 'Apple' ........................... passed
+And match response.[0].project[0].projectName == 'Movie App' .............. passed
+And match response.[0].project[0].technology[2] == 'Gradle' ............... passed
+And match response.[0].experience == '#[3]' ............................... passed
+And match response.[0].project[0].technology == '#[3]' .................... passed
+And match response.[0].experience[*] == ['Google','Apple','Mobile Iron'] .. passed
+And match response.[0].project[0].technology[*] == ['Kotlin','SQL Lite','Gradle'] . passed
+And match response.[0].experience[*] contains ['Apple'] ................... passed
+And match response.[0].project[0].technology[*] contains ['Kotlin','SQL Lite'] . passed
+And match response.[*].jobId contains 1 ................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.validateJsonResponse" name="To get the data in JSON format using fuzzy matcher" time="0.107511">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.[0].jobId == 1 ......................................... passed
+And match response.[0].experience[1] == 'Apple' ........................... passed
+And match response.[0].project[0].projectName == 'Movie App' .............. passed
+And match response.[0].project[0].technology[2] == 'Gradle' ............... passed
+And match response.[0].experience == '#[3]' ............................... passed
+And match response.[0].project[0].technology == '#[3]' .................... passed
+And match response.[0].experience[*] == ['Google','Apple','Mobile Iron'] .. passed
+And match response.[0].project[0].technology[*] == ['Kotlin','SQL Lite','Gradle'] . passed
+And match response.[0].experience[*] contains ['Apple'] ................... passed
+And match response.[0].project[0].technology[*] contains ['Kotlin','SQL Lite'] . passed
+And match response.[*].jobId contains 1 ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.[0].jobId == '#present' ................................ passed
+And match response.[0].experience[1] == '#notnull' ........................ passed
+And match response.[0].project[0].projectName == '#ignore' ................ passed
+And match response.[0].project[0].technology == '#array' .................. passed
+And match response.[0].jobTitle == '#string' .............................. passed
+And match response.[0].jobId == '#number' ................................. passed
+And match response.[0].jobId == '#? _ &gt;= 1' ............................... passed
+And match response.[0].jobTitle == '#string? _.length == 13' .............. passed
+And match response.[0].experience == '#[]' ................................ passed
+And match response.[0].experience == '#[3]' ............................... passed
+And match response.[0].experience == '#[3] #string' ....................... passed
+And match response.[0].experience == '#[3] #string? _.length &gt;= 2' ........ passed</system-out>
+  </testcase>
+</testsuite>

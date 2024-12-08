@@ -1,0 +1,13 @@
+<testsuite failures="0" name="com/api/automation/getrequest/variable.feature" skipped="0" tests="1" time="0.060941">
+  <testcase classname="com.api.automation.getrequest.variable" name="To create a Variable" time="0.060941">
+    <system-out>Given def app_name = 'Google' ............................................. passed
+And def date = '30-05-1997' ............................................... passed
+Given def var_int = 10 .................................................... passed
+And def var_string = 'KarateTest' ......................................... passed
+Then print "Integer =&gt; ", var_int ......................................... passed
+And print "String =&gt; ", var_string ........................................ passed
+And def var_int_2 = var_int + 90 .......................................... passed
+And print "New Integer =&gt; ", var_int_2 .................................... passed
+And print "Application and date are ", app_name, date ..................... passed</system-out>
+  </testcase>
+</testsuite>

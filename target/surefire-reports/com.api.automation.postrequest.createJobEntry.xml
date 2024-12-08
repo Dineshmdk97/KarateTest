@@ -1,0 +1,253 @@
+<testsuite failures="0" name="com/api/automation/postrequest/createJobEntry.feature" skipped="0" tests="7" time="0.26412">
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in JSON format" time="0.01509">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in XML format" time="0.069922">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in XML format and also receive the response in XML format" time="0.065862">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/xml', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response/Job/jobId == 1 ......................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in JSON format using external JSON file" time="0.021226">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/xml', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response/Job/jobId == 1 ......................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.json') ................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in XML format using external XML file" time="0.03033">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/xml', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response/Job/jobId == 1 ......................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.json') ................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.xml') .................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in JSON format with embedded expression" time="0.037609">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/xml', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response/Job/jobId == 1 ......................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.json') ................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.xml') .................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def getJobId = function() {return Math.floor((100) * Math.random());} . passed
+And def jobID = getJobId() ................................................ passed
+And request {"jobId":"#(jobID)","jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.createJobEntry" name="To create the job entry in XML format with embedded expression" time="0.024081">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request {"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And request &lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/xml', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response/Job/jobId == 1 ......................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.json') ................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def body = read('data/jobEntry.xml') .................................. passed
+And request body .......................................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == 1 ............................................. passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def getJobId = function() {return Math.floor((100) * Math.random());} . passed
+And def jobID = getJobId() ................................................ passed
+And request {"jobId":"#(jobID)","jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg' ............................ passed
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/add' ........................................... passed
+And def getJobId = function() {return Math.floor((100) * Math.random());} . passed
+And def jobID = getJobId() ................................................ passed
+And request &lt;item&gt;&lt;jobId&gt;#(jobID)&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt; . passed
+And headers {Accept : 'application/json', Content-Type : 'application/xml'} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And print response ........................................................ passed
+And match response.jobId == '#(jobID)' .................................... passed</system-out>
+  </testcase>
+</testsuite>

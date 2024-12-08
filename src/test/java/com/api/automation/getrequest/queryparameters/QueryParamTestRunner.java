@@ -1,0 +1,11 @@
+package com.api.automation.getrequest.queryparameters;
+
+import com.intuit.karate.junit5.Karate;
+import com.intuit.karate.junit5.Karate.Test;
+
+public class QueryParamTestRunner {
+	@Test
+	public Karate test() {
+		return Karate.run("queryParameter").relativeTo(getClass());
+	}
+}

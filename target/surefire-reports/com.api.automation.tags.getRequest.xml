@@ -1,0 +1,24 @@
+<testsuite failures="0" name="com/api/automation/tags/getRequest.feature" skipped="0" tests="2" time="0.042938">
+  <testcase classname="com.api.automation.tags.getRequest" name="To get all data from the appilcation in JSON format using path variable" time="0.015266">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print '------------------------' ...................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.getRequest" name="To get all data from the appilcation in XML format using path variable" time="0.027672">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print '------------------------' ...................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And print '------------------------' ...................................... passed
+And path '/normal/webapi/all' ............................................. passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

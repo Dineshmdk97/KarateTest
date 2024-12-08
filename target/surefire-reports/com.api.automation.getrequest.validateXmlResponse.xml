@@ -1,0 +1,57 @@
+<testsuite failures="2" name="com/api/automation/getrequest/validateXmlResponse.feature" skipped="0" tests="2" time="0.093475">
+  <testcase classname="com.api.automation.getrequest.validateXmlResponse" name="To get the data in XML format" time="0.065893">
+    <failure message="validateXmlResponse.feature:15 - path: /List/item/jobId, actual: '[&quot;1&quot;,&quot;17&quot;,&quot;91&quot;,&quot;1&quot;,&quot;54&quot;,&quot;76&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;65&quot;,&quot;2&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;10&quot;,&quot;25&quot;,&quot;15&quot;,&quot;34&quot;,&quot;49&quot;,&quot;69&quot;,&quot;7&quot;,&quot;91&quot;]', expected: '1', reason: not equal">Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response/List/item/jobId == 1 ................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateXmlResponse.feature:15 - path: /List/item/jobId, actual: '["1","17","91","1","54","76","1","1","1","1","65","2","1","1","1","1","1","1","10","25","15","34","49","69","7","91"]', expected: '1', reason: not equal&#13;
+	at ✽.And match response/List/item/jobId == 1 (validateXmlResponse.feature:15)&#13;
+
+And match response/List/item/jobTitle == 'Software Engg' .................. skipped
+And match response/List/item/experience/experience[1] == 'Google' ......... skipped
+And match response/List/item/project/project/projectName == 'Movie App' ... skipped
+And match response/List/item/project/project/technology/technology[2] == 'SQL Lite' . skipped
+And match /List/item/experience/experience[1] == 'Google' ................. skipped
+And match response.List.item.experience.experience[0] == 'Google' ......... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.validateXmlResponse" name="To get the data in XML format" time="0.027582">
+    <failure message="validateXmlResponse.feature:107 - path: /List/item/jobId, actual: '[&quot;1&quot;,&quot;17&quot;,&quot;91&quot;,&quot;1&quot;,&quot;54&quot;,&quot;76&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;65&quot;,&quot;2&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;10&quot;,&quot;25&quot;,&quot;15&quot;,&quot;34&quot;,&quot;49&quot;,&quot;69&quot;,&quot;7&quot;,&quot;91&quot;]', expected: '#? _ &gt;= 1', reason: did not evaluate to 'true'">Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response/List/item/jobId == 1 ................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateXmlResponse.feature:15 - path: /List/item/jobId, actual: '["1","17","91","1","54","76","1","1","1","1","65","2","1","1","1","1","1","1","10","25","15","34","49","69","7","91"]', expected: '1', reason: not equal&#13;
+	at ✽.And match response/List/item/jobId == 1 (validateXmlResponse.feature:15)&#13;
+
+And match response/List/item/jobTitle == 'Software Engg' .................. skipped
+And match response/List/item/experience/experience[1] == 'Google' ......... skipped
+And match response/List/item/project/project/projectName == 'Movie App' ... skipped
+And match response/List/item/project/project/technology/technology[2] == 'SQL Lite' . skipped
+And match /List/item/experience/experience[1] == 'Google' ................. skipped
+And match response.List.item.experience.experience[0] == 'Google' ......... skipped
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response/List/item/jobId == '#notnull' .......................... passed
+And match response/List/item/jobTitle == '#string' ........................ passed
+And match response/List/item/experience/experience[1] == '#notnull' ....... passed
+And match response/List/item/project/project/projectName == '#present' .... passed
+And match response/List/item/project/project/technology/technology[2] == '#ignore' . passed
+And match response/List/item/jobId == '#? _ &gt;= 1' ......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateXmlResponse.feature:107 - path: /List/item/jobId, actual: '["1","17","91","1","54","76","1","1","1","1","65","2","1","1","1","1","1","1","10","25","15","34","49","69","7","91"]', expected: '#? _ &gt;= 1', reason: did not evaluate to 'true'&#13;
+	at ✽.And match response/List/item/jobId == '#? _ &gt;= 1' (validateXmlResponse.feature:107)&#13;
+
+And match response/List/item/jobTitle == '#string? _.length &gt;= 13' ........ skipped</failure>
+  </testcase>
+</testsuite>

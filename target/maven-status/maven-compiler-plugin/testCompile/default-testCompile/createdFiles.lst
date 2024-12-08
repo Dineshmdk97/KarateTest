@@ -1,0 +1,17 @@
+com\api\automation\getrequest\GETTestRunner.class
+com\api\automation\TagsRunner.class
+com\api\automation\ParallelTestBuilder.class
+com\api\automation\postrequest\POSTTestRunner.class
+com\api\automation\TagsRunnerWithDynamicValuesSingleValue.class
+com\api\automation\postrequest\fileupload\UploadTestRunner.class
+com\api\automation\getrequest\queryparameters\QueryParamTestRunner.class
+com\api\automation\putrequest\PUTTestRunner.class
+com\api\automation\ParallelTestRunner.class
+com\api\automation\getrequest\VariableTestRunner.class
+com\api\automation\deleterequest\DELETETestRunner.class
+com\api\automation\ReadSystemPropertyExample.class
+com\api\automation\getrequest\ExtFileTestRunner.class
+com\api\automation\patchrequest\PATCHTestRunner.class
+com\api\automation\getrequest\JsonPathTestRunner.class
+com\api\automation\TagsRunnerWithDynamicValuesMultipleValues.class
+com\api\automation\postrequest\data\datadriven\DataDrivenTestRunner.class

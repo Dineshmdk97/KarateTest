@@ -1,0 +1,63 @@
+<testsuite failures="0" name="com/api/automation/tags/deleteJobEntry.feature" skipped="0" tests="2" time="0.168695">
+  <testcase classname="com.api.automation.tags.deleteJobEntry" name="To validate request chaining" time="0.10019">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def createJobId = getRandomNumber() ................................... passed
+And def createJob = call read("../postrequest/data/createJobEntryWithVariables.feature") {_url: 'http://localhost:9897', _path: '/normal/webapi/add', _id: '#(createJobId)'} . passed
+And def jobId = createJob.responseJobId ................................... passed
+And def jobTitle = createJob.responseJobTitle ............................. passed
+And def jobDesc = 'To develop android and iOS applications' ............... passed
+Given path '/normal/webapi/update/details' ................................ passed
+And params {id: '#(jobId)', jobTitle: '#(jobTitle)', jobDescription: '#(jobDesc)'} . passed
+And header Accept = 'application/json' .................................... passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And def jobId = response.jobId ............................................ passed
+And def jobTitle = response.jobTitle ...................................... passed
+Given path '/normal/webapi/find' .......................................... passed
+And params { id: '#(jobId)', jobTitle: '#(jobTitle)' } .................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDesc .............................. passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.deleteJobEntry" name="To validate request chaining" time="0.068505">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def createJobId = getRandomNumber() ................................... passed
+And def createJob = call read("../postrequest/data/createJobEntryWithVariables.feature") {_url: 'http://localhost:9897', _path: '/normal/webapi/add', _id: '#(createJobId)'} . passed
+And def jobId = createJob.responseJobId ................................... passed
+And def jobTitle = createJob.responseJobTitle ............................. passed
+And def jobDesc = 'To develop android and iOS applications' ............... passed
+Given path '/normal/webapi/update/details' ................................ passed
+And params {id: '#(jobId)', jobTitle: '#(jobTitle)', jobDescription: '#(jobDesc)'} . passed
+And header Accept = 'application/json' .................................... passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And def jobId = response.jobId ............................................ passed
+And def jobTitle = response.jobTitle ...................................... passed
+Given path '/normal/webapi/find' .......................................... passed
+And params { id: '#(jobId)', jobTitle: '#(jobTitle)' } .................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDesc .............................. passed
+Given url 'http://localhost:9897' ......................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def createJobId = getRandomNumber() ................................... passed
+And def createJob = call read("../postrequest/data/createJobEntryWithVariables.feature") {_url: 'http://localhost:9897', _path: '/normal/webapi/add', _id: '#(createJobId)'} . passed
+And def jobId = createJob.responseJobId ................................... passed
+And def jobTitle = createJob.responseJobTitle ............................. passed
+And def jobDesc = 'To develop android and iOS applications' ............... passed
+Given path '/normal/webapi/update/details' ................................ passed
+And params {id: '#(jobId)', jobTitle: '#(jobTitle)', jobDescription: '#(jobDesc)'} . passed
+And header Accept = 'application/json' .................................... passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And def jobId = response.jobId ............................................ passed
+And def jobTitle = response.jobTitle ...................................... passed</system-out>
+  </testcase>
+</testsuite>

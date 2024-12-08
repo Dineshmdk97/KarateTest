@@ -1,0 +1,10 @@
+<testsuite failures="0" name="com/api/automation/postrequest/fileupload/fileUpload.feature" skipped="0" tests="1" time="0.102414">
+  <testcase classname="com.api.automation.postrequest.fileupload.fileUpload" name="To upload the text file in test application" time="0.102414">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/upload' ........................................ passed
+And multipart file file = {read: "fileToUpload.txt", filename: "fileToUpload.txt", Content-Type: "multipart/form-data"} . passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

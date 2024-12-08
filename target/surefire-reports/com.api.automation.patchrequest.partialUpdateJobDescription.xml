@@ -1,0 +1,17 @@
+<testsuite failures="0" name="com/api/automation/patchrequest/partialUpdateJobDescription.feature" skipped="0" tests="1" time="0.125833">
+  <testcase classname="com.api.automation.patchrequest.partialUpdateJobDescription" name="To partially update the job description for newly added job entry" time="0.125833">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And def getRandomNumber = function() {return Math.floor((100)*Math.random());} . passed
+And def createJobId =  getRandomNumber() .................................. passed
+And def createJob = call read("../postrequest/data/createJobEntryWithVariables.feature") {_url: 'http://localhost:9897', _path: '/normal/webapi/add', _id: '#(createJobId)'} . passed
+And def jobDesc = 'To develop Android and iOS applications' ............... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/update/details' .................................. passed
+And params {id: '#(createJobId)', jobTitle: 'Software Engineering', jobDescription: '#(jobDesc)'} . passed
+And headers {Accept: 'application/json'} .................................. passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDesc .............................. passed</system-out>
+  </testcase>
+</testsuite>

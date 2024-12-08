@@ -1,0 +1,45 @@
+<testsuite failures="2" name="com/api/automation/getrequest/validateFromFile.feature" skipped="0" tests="2" time="0.056846">
+  <testcase classname="com.api.automation.getrequest.validateFromFile" name="To get the data in JSON format from an external JSON file" time="0.02181">
+    <failure message="validateFromFile.feature:14 - could not find or read file: ../jsonResponse.json">Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And def actualResponse = read("../jsonResponse.json") ..................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateFromFile.feature:14 - could not find or read file: ../jsonResponse.json&#13;
+	at ✽.And def actualResponse = read("../jsonResponse.json") (validateFromFile.feature:14)&#13;
+
+And print "JSON response =&gt; ", actualResponse ............................. skipped
+And match response == actualResponse ...................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.validateFromFile" name="To get the data in JSON format from an external XML file" time="0.035036">
+    <failure message="validateFromFile.feature:24 - could not find or read file: ../xmlResponse.xml">Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And def actualResponse = read("../jsonResponse.json") ..................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateFromFile.feature:14 - could not find or read file: ../jsonResponse.json&#13;
+	at ✽.And def actualResponse = read("../jsonResponse.json") (validateFromFile.feature:14)&#13;
+
+And print "JSON response =&gt; ", actualResponse ............................. skipped
+And match response == actualResponse ...................................... skipped
+Given url 'http://localhost:9897' ......................................... passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And def actualResponse = read("../xmlResponse.xml") ....................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: validateFromFile.feature:24 - could not find or read file: ../xmlResponse.xml&#13;
+	at ✽.And def actualResponse = read("../xmlResponse.xml") (validateFromFile.feature:24)&#13;
+
+And print "XML response =&gt; ", actualResponse .............................. skipped
+And match response == actualResponse ...................................... skipped</failure>
+  </testcase>
+</testsuite>

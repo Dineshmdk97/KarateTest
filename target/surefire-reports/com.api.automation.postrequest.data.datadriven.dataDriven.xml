@@ -1,0 +1,287 @@
+<testsuite failures="0" name="com/api/automation/postrequest/data/datadriven/dataDriven.feature" skipped="0" tests="9" time="0.149836">
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven for method - get" time="0.017571">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven for method - post" time="0.014217">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven for method - put" time="0.011238">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven for job id - 1" time="0.029629">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven for job id - fake id 1" time="0.017818">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven for job id - fake id 2" time="0.016545">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven from csv file" time="0.010032">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven from csv file" time="0.013141">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postrequest.data.datadriven.dataDriven" name="To test job description in the test application using data driven from csv file" time="0.019644">
+    <system-out>And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/all' ........................................... passed
+When print 'get' .......................................................... passed
+And print '200' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'post' ......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given print 'http://localhost:9897' ....................................... passed
+Then print '/normal/webapi/add' ........................................... passed
+When print 'put' .......................................................... passed
+And print '201' ........................................................... passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 201 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed
+And def testdata = read("testData.csv") ................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And path '/normal/webapi/add' ............................................. passed
+And request {"jobId":"#(jobId)","jobTitle":"#(jobTitle)","jobDescription":"#(jobDescription)","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]} . passed
+And headers {Accept: "application/json", Content-Type: "application/json"} . passed
+When method post .......................................................... passed
+And status 400 ............................................................ passed</system-out>
+  </testcase>
+</testsuite>
